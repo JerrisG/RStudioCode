@@ -4,10 +4,13 @@ library(tidyverse)
 install.packages("lubridate")
 library(lubridate)
 library(ggplot2)
+
 #Check current working directory
 getwd()
+
 #Change working directory to location of CSV files
 setwd("PATH/csv_versions_2021_06_19")
+
 #Load and store CSV
 may_2020 <- read_csv("202005-divvy-tripdata.csv")
 june_2020 <- read_csv("202006-divvy-tripdata.csv")
@@ -22,6 +25,7 @@ feb_2021 <- read_csv("202102-divvy-tripdata.csv")
 march_2021 <- read_csv("202103-divvy-tripdata.csv")
 april_2021 <- read_csv("202104-divvy-tripdata.csv")
 may_2021 <- read_csv("202105-divvy-tripdata.csv")
+
 #Determine if column names are the same
 colnames(may_2020)
 colnames(june_2020)
@@ -36,6 +40,7 @@ colnames(feb_2021)
 colnames(march_2021)
 colnames(april_2021)
 colnames(may_2021)
+
 #Rename function used to change column names
 (may_2020<-rename(may_2020
                   ,trip_id = ride_id
