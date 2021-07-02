@@ -4,3 +4,5 @@
 * tidyverse
 * ggplot2
 * lubridate
+
+![alt text](BarPlot.JPG)
