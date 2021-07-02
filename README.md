@@ -5,4 +5,5 @@
 * ggplot2
 * lubridate
 
+### Generated Plot
 ![alt text](BarPlot.JPG)
