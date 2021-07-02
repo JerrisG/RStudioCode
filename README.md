@@ -1,6 +1,6 @@
 # RStudioCode
 ## Code Segments From RStudio
-*Libraries 
-**tidyverse
-**ggplot2
-**lubridate
+### Libraries 
+* tidyverse
+* ggplot2
+* lubridate
