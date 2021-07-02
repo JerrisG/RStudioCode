@@ -4,10 +4,13 @@ library(tidyverse)
 install.packages("lubridate")
 library(lubridate)
 library(ggplot2)
+
 #Check current working directory
 getwd()
+
 #Change working directory to location of CSV files
-setwd("C:/Users/19732/Desktop/GoogleAnalyticsCertification/Module8/Week2/CapstonProject1_12mos_bikeridesharedata_2021_06_19/Data_Being_Used_2021_06_19/csv_versions_2021_06_19")
+setwd("PATH/csv_versions_2021_06_19")
+
 #Load and store CSV
 may_2020 <- read_csv("202005-divvy-tripdata.csv")
 june_2020 <- read_csv("202006-divvy-tripdata.csv")
@@ -22,6 +25,7 @@ feb_2021 <- read_csv("202102-divvy-tripdata.csv")
 march_2021 <- read_csv("202103-divvy-tripdata.csv")
 april_2021 <- read_csv("202104-divvy-tripdata.csv")
 may_2021 <- read_csv("202105-divvy-tripdata.csv")
+
 #Determine if column names are the same
 colnames(may_2020)
 colnames(june_2020)
@@ -36,6 +40,7 @@ colnames(feb_2021)
 colnames(march_2021)
 colnames(april_2021)
 colnames(may_2021)
+
 #Rename function used to change column names
 (may_2020<-rename(may_2020
                   ,trip_id = ride_id
@@ -339,7 +344,7 @@ all_trips_v2 %>%
 
 #Export Summary File
 counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$usertype + all_trips_v2$day_of_week, FUN = mean)
-write.csv(counts, file = 'C:/Users/19732/Desktop/GoogleAnalyticsCertification/Module8/Week2/CapstonProject1_12mos_bikeridesharedata_2021_06_19/ProcessedFileandData/avg_ride_length.csv')
+write.csv(counts, file = 'PATH/avg_ride_length.csv')
 
 #Export Entire Data Frame
-write.csv(all_trips_v2,file = 'C:/Users/19732/Desktop/GoogleAnalyticsCertification/Module8/Week2/CapstonProject1_12mos_bikeridesharedata_2021_06_19/ProcessedFileandData/all_trips.csv')
+write.csv(all_trips_v2,file = 'PATH/all_trips.csv')
